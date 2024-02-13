@@ -12,26 +12,20 @@ vim.call('plug#begin')
 --   - Avoid using standard Vim directory names like 'plugin'
 
 -- Make sure you use single quotes
+--Plug('nvim-treesitter/nvim-treesitter') --, {do=':TSUpdate'})
+Plug('https://github.com/apple/pkl-neovim.git')
+Plug('nvim-treesitter/nvim-treesitter',{['do'] = function()
+    vim.call(':TSUpdate')
+end})
 
--- Plug 
 Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim')
 --                                    , {tag= '0.1.4' })
 --or                                , { 'branch': '0.1.x' }
-
--- Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug('BurntSushi/ripgrep')
 
 Plug 'junegunn/vim-easy-align'
-
 -- Hur fungerar easy align?" 
-
--- Any valid git URL is allowed
--- Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-
--- Multiple Plug commands can be written in a single line using | separators
--- Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
-
 
 -- On-demand loading
 -- Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -39,18 +33,17 @@ Plug 'junegunn/vim-easy-align'
 
 -- main one
 Plug('ms-jpq/coq_nvim', {branch= 'coq', auto_start= 'silent'})
--- 9000+ Snippets
 Plug('ms-jpq/coq.artifacts', {branch= 'artifacts'})
 
 -- lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
 -- Need to **configure separately**
 
 Plug('ms-jpq/coq.thirdparty', {branch= '3p'})
--- - shell repl
--- - nvim lua api
--- - scientific calculator
--- - comment banner
--- - etc
+-- shell repl
+-- nvim lua api
+-- scientific calculator
+-- comment banner
+-- etc
 
 -- Using a non-default branch
 -- Am I using this?
@@ -88,5 +81,14 @@ local coq = require("coq")
 require("options")
 require("keymaps")
 
+-- Should be moved to keymaps 
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
 vim.cmd([[COQnow]])
+
+-- Temp solution
 
