@@ -41,6 +41,7 @@ Plug 'junegunn/goyo.vim'
 
 -- Time to learn 
 Plug 'kenn7/vim-arsync'
+Plug 'prabirshrestha/async.vim'
 
 -- Initialize plugin system
 -- Automatically executes `filetype plugin indent on` and `syntax enable`.
@@ -48,13 +49,13 @@ vim.call('plug#end')
 
 vim.g.coq_settings = { auto_start = "shut-up" }
 local coq = require("coq")
+vim.cmd([[COQnow]])
 
 require("options")
 require("keymaps")
 
 -- TO DO: 
 -- require("COQnow") 
-vim.cmd([[COQnow]])
 
 -- Temp solution
 
