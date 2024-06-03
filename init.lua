@@ -5,7 +5,12 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
 
+
+-- Does not work with arm-mac 
+Plug 'sakhnik/nvim-gdb'
+
 Plug('https://github.com/apple/pkl-neovim.git')
+
 Plug('nvim-treesitter/nvim-treesitter',{['do'] = function() vim.call(':TSUpdate') end})
 Plug('honza/vim-snippets')
 
@@ -72,10 +77,4 @@ if hasConfigs then
   }
 end
 --EOF
-
-
--- TO DO: 
--- require("COQnow") 
-
--- Temp solution
 
