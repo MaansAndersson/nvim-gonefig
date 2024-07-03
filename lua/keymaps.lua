@@ -4,16 +4,15 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+-- open new Telescope + find file 
+
+--local goyo_l = require('goyo')
+vim.keymap.set('n', '<leader>gg', function() vim.cmd([[Goyo]]) end, {})
 
 
---local GO = require('Goyo.')
 --vim.keymap.set('n', '<meta>g', GO, {})
 
 
--- open new Telescope + find file 
---
---
---
 
 
 require("oil").setup({

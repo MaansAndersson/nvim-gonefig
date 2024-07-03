@@ -9,7 +9,7 @@ vim.call('plug#begin')
 -- Does not work with arm-mac 
 Plug 'sakhnik/nvim-gdb'
 
-Plug('https://github.com/apple/pkl-neovim.git')
+--Plug('https://github.com/apple/pkl-neovim.git')
 
 Plug('nvim-treesitter/nvim-treesitter',{['do'] = function() vim.call(':TSUpdate') end})
 Plug('honza/vim-snippets')
@@ -58,23 +58,24 @@ vim.g.coq_settings = { auto_start = "shut-up" }
 local coq = require("coq")
 vim.cmd([[COQnow]])
 vim.cmd([[set spell spelllang=en_gb]])
+vim.cmd([[colorscheme koehler]])
 require("options")
 require("keymaps")
 
 
 --" The below is required for enabling the tree-sitter syntax engine, which is used by pkl-neovim.
 --lua <<EOF
-local hasConfigs, configs = pcall(require, "nvim-treesitter.configs")
-if hasConfigs then
-  configs.setup {
-    ensure_installed = "pkl",
-    highlight = {
-      enable = true,              -- false will disable the whole extension
-    },
-    indent = {
-      enable = true
-    }
-  }
-end
+--local hasConfigs, configs = pcall(require, "nvim-treesitter.configs")
+--if hasConfigs then
+--  configs.setup {
+--    ensure_installed = "pkl",
+--    highlight = {
+--      enable = true,              -- false will disable the whole extension
+--    },
+--    indent = {
+--      enable = true
+--    }
+--  }
+--end
 --EOF
 
