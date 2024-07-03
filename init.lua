@@ -8,7 +8,9 @@ vim.call('plug#begin')
 
 -- Does not work with arm-mac 
 Plug 'sakhnik/nvim-gdb'
+Plug 'dbgx/lldb.nvim'
 
+-- 
 Plug('https://github.com/apple/pkl-neovim.git')
 
 Plug('nvim-treesitter/nvim-treesitter',{['do'] = function() vim.call(':TSUpdate') end})
