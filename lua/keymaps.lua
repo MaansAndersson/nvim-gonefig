@@ -8,7 +8,8 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 --local goyo_l = require('goyo')
 vim.keymap.set('n', '<leader>gg', function() vim.cmd([[Goyo]]) end, {})
-
+vim.keymap.set('n', '<leader>oo', function() vim.cmd([[Oil]]) end, {})
+vim.keymap.set('n', '<leader>fz', function() vim.cmd([[FZF]]) end, {})
 
 --vim.keymap.set('n', '<meta>g', GO, {})
 
