@@ -6,14 +6,10 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 -- open new Telescope + find file 
 
---local goyo_l = require('goyo')
+-- Should add require etc. for Goyo, Oil, and fzf. 
 vim.keymap.set('n', '<leader>gg', function() vim.cmd([[Goyo]]) end, {})
 vim.keymap.set('n', '<leader>oo', function() vim.cmd([[Oil]]) end, {})
 vim.keymap.set('n', '<leader>fz', function() vim.cmd([[FZF]]) end, {})
-
---vim.keymap.set('n', '<meta>g', GO, {})
-
-
 
 
 require("oil").setup({
