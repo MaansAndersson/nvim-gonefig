@@ -34,7 +34,7 @@ Plug('ms-jpq/coq.thirdparty', {branch= '3p'})
 -- Am I using this?
 Plug('rdnetto/YCM-Generator', {branch= 'stable' })
 
--- Plugin outside ~/.vim/plugged with post-update hook
+-- plug-in outside ~/.vim/plugged with post-update hook
 Plug('junegunn/fzf', {
   ['do'] = function()
     vim.call('fzf#install')
@@ -52,15 +52,11 @@ Plug 'junegunn/goyo.vim'
 Plug 'kenn7/vim-arsync'
 Plug 'prabirshrestha/async.vim'
 
--- Initialize plugin system
--- Automatically executes `filetype plugin indent on` and `syntax enable`.
+-- Initialize plug-in system
+-- Automatically executes `filetype plug-in indent on` and `syntax enable`.
 vim.call('plug#end')
 
-vim.g.coq_settings = { auto_start = "shut-up" }
-local coq = require("coq")
-vim.cmd([[COQnow]])
-vim.cmd([[set spell spelllang=en_gb]])
-vim.cmd([[colorscheme koehler]])
+require("startup")
 require("options")
 require("keymaps")
 
