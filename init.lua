@@ -1,16 +1,13 @@
 local vim = vim
--- remove
 vim.call('has', 'nvim-0.5')
-local Plug = vim.fn['plug#']
 
+local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 
-
 -- Does not work with arm-mac 
-Plug 'sakhnik/nvim-gdb'
-Plug 'dbgx/lldb.nvim'
+Plug('sakhnik/nvim-gdb')
+Plug('dbgx/lldb.nvim')
 
- 
 Plug('https://github.com/apple/pkl-neovim.git')
 
 Plug('nvim-treesitter/nvim-treesitter',{['do'] = function() vim.call(':TSUpdate') end})
@@ -20,10 +17,11 @@ Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim')
 --                                    , {tag= '0.1.4' })
 --                                    , { 'branch': '0.1.x' }
+
 Plug('BurntSushi/ripgrep')
-Plug 'stevearc/oil.nvim'
---Plug('stevearc/oiln.nvim')
-Plug 'junegunn/vim-easy-align'
+Plug('stevearc/oil.nvim')
+
+Plug('junegunn/vim-easy-align')
 -- Hur fungerar easy align?" 
 
 Plug('ms-jpq/coq_nvim', {branch= 'coq', auto_start= 'silent'})
@@ -43,23 +41,23 @@ Plug('junegunn/fzf', {
 
 -- Futhark
 -- Plug 'BeneCollyridam/futhark-vim' -- Original 
-Plug 'jonesz/futhark-vim'            -- With def
+Plug('jonesz/futhark-vim')           -- With def
 
 -- Goyo reader
-Plug 'junegunn/goyo.vim'
+Plug('junegunn/goyo.vim')
 
--- Time to learn 
-Plug 'kenn7/vim-arsync'
-Plug 'prabirshrestha/async.vim'
+--  Should I use this between macbook and bluedog?
+Plug('kenn7/vim-arsync')
+Plug('prabirshrestha/async.vim')
 
 -- Initialize plug-in system
 -- Automatically executes `filetype plug-in indent on` and `syntax enable`.
 vim.call('plug#end')
 
 require("startup")
-require("options")
 require("keymaps")
-
+require("options")
+require("oilmaps")
 
 --" The below is required for enabling the tree-sitter syntax engine, which is used by pkl-neovim.
 --lua <<EOF
