@@ -42,13 +42,13 @@ Plug('junegunn/fzf', {
 })
 
 -- Futhark
--- Plug 'BeneCollyridam/futhark-vim' -- Original 
+-- Plug 'BeneCollyridam/futhark-vim' -- Original
 Plug 'jonesz/futhark-vim'            -- With def
 
 -- Goyo reader
 Plug 'junegunn/goyo.vim'
 
--- Time to learn 
+-- Time to learn
 Plug 'kenn7/vim-arsync'
 Plug 'prabirshrestha/async.vim'
 
