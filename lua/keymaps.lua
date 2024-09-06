@@ -11,8 +11,10 @@ vim.keymap.set('n', '<leader>gg', function() vim.cmd([[Goyo]]) end, {})
 vim.keymap.set('n', '<leader>oo', function() vim.cmd([[Oil]]) end, {})
 vim.keymap.set('n', '<leader>fz', function() vim.cmd([[FZF]]) end, {})
 
--- Check spelling in English
+-- Quit insert mode in terminal with Esc
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]])
 
+-- Check spelling in English
 vim.keymap.set('n', '<leader>se', function() vim.cmd([[set spell spelllang=en_gb]]) end, {})
 
 
