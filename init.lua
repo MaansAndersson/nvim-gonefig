@@ -45,7 +45,7 @@ Plug 'jonesz/futhark-vim'            -- With def
 -- Goyo reader
 Plug('junegunn/goyo.vim')
 
--- Time to learn
+-- Works well with clusters
 Plug 'kenn7/vim-arsync'
 Plug 'prabirshrestha/async.vim'
 
