@@ -4,7 +4,7 @@ vim.call('has', 'nvim-0.5')
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 
--- Does not work with arm-mac 
+-- Does not work with arm-mac
 Plug('sakhnik/nvim-gdb')
 Plug('dbgx/lldb.nvim')
 

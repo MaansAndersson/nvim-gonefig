@@ -17,6 +17,8 @@ vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]])
 -- Check spelling in English
 vim.keymap.set('n', '<leader>se', function() vim.cmd([[set spell spelllang=en_gb]]) end, {})
 
+
+vim.keymap.set('n', '<leader>tt', function() vim.cmd([[terminal]]) end, {})
 -- Show tabs
 
 
