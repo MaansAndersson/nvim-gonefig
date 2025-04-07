@@ -5,6 +5,8 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 
 -- Does not work with arm-mac
+Plug('github/copilot.vim')
+
 Plug('sakhnik/nvim-gdb')
 Plug('dbgx/lldb.nvim')
 

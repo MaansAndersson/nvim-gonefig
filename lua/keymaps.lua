@@ -22,4 +22,6 @@ vim.keymap.set('n', '<leader>tt', function() vim.cmd([[terminal]]) end, {})
 -- Show tabs
 
 
+vim.keymap.set('n', '<leader>cc', function() vim.cmd([[Copilot]]) end, {})
+
 
