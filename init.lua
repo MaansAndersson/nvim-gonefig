@@ -4,9 +4,10 @@ vim.call('has', 'nvim-0.5')
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 
--- Does not work with arm-mac
+
 Plug('github/copilot.vim')
 
+-- Does not work with arm-mac
 Plug('sakhnik/nvim-gdb')
 Plug('dbgx/lldb.nvim')
 
@@ -23,8 +24,8 @@ Plug('nvim-telescope/telescope.nvim')
 Plug('BurntSushi/ripgrep')
 Plug('stevearc/oil.nvim')
 
+-- Remove? --
 Plug('junegunn/vim-easy-align')
--- Hur fungerar easy align?" 
 
 Plug('ms-jpq/coq_nvim', {branch= 'coq', auto_start= 'silent'})
 Plug('ms-jpq/coq.artifacts', {branch= 'artifacts'})
