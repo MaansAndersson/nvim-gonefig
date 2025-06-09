@@ -25,3 +25,5 @@ vim.keymap.set('n', '<leader>tt', function() vim.cmd([[terminal]]) end, {})
 vim.keymap.set('n', '<leader>cc', function() vim.cmd([[Copilot]]) end, {})
 
 
+vim.keymap.set('n', '<leader>cf', function() vim.cmd([[!clang-format *cc -i]]) end, {})
+
