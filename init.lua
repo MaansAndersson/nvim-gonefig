@@ -42,8 +42,16 @@ Plug('junegunn/fzf', {
   end
 })
 
+-- Go
+Plug( 'fatih/vim-go', { 
+	['do'] = function() 
+	  vim.call(':GoUpdateBinaries') 
+	end 
+})
+
 -- Futhark
-Plug 'jonesz/futhark-vim'            -- With def
+Plug 'jonesz/futhark-vim'
+-- With def
 
 -- Goyo reader
 Plug('junegunn/goyo.vim')
@@ -51,6 +59,8 @@ Plug('junegunn/goyo.vim')
 -- Works well with clusters
 Plug 'kenn7/vim-arsync'
 Plug 'prabirshrestha/async.vim'
+
+Plug 'albenisolmos/telescope-oil.nvim'
 
 -- Initialize plug-in system
 -- Automatically executes `filetype plug-in indent on` and `syntax enable`.
