@@ -1,10 +1,10 @@
 local vim = vim
-vim.call('has', 'nvim-0.5')
+vim.call('has', 'nvim-0.12.1')
 
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 
-
+Plug('stevearc/conform.nvim')
 Plug('github/copilot.vim')
 
 -- Does not work with arm-mac
@@ -20,7 +20,7 @@ Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim')
 --                                    , {tag= '0.1.4' })
 --                                    , { 'branch': '0.1.x' }
-
+Plug("pablopunk/pi.nvim")
 Plug('BurntSushi/ripgrep')
 Plug('stevearc/oil.nvim')
 
@@ -50,7 +50,7 @@ Plug( 'fatih/vim-go', {
 })
 
 -- Futhark
-Plug 'jonesz/futhark-vim'
+--Plug('jonesz/futhark-vim')
 -- With def
 
 -- Goyo reader
