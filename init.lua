@@ -4,16 +4,16 @@ vim.call('has', 'nvim-0.12.1')
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 
+Plug('sindrets/diffview.nvim')
+
 Plug('stevearc/conform.nvim')
 Plug('github/copilot.vim')
 
--- Does not work with arm-mac
 Plug('sakhnik/nvim-gdb')
-Plug('dbgx/lldb.nvim')
 
 Plug('https://github.com/apple/pkl-neovim.git')
 
-Plug('nvim-treesitter/nvim-treesitter',{['do'] = function() vim.call(':TSUpdate') end})
+Plug('nvim-treesitter/nvim-treesitter',{['do'] = function() vim.cmd('TSUpdate') end})
 Plug('honza/vim-snippets')
 
 Plug('nvim-lua/plenary.nvim')
@@ -21,19 +21,14 @@ Plug('nvim-telescope/telescope.nvim')
 --                                    , {tag= '0.1.4' })
 --                                    , { 'branch': '0.1.x' }
 Plug("pablopunk/pi.nvim")
-Plug('BurntSushi/ripgrep')
 Plug('stevearc/oil.nvim')
 
 -- Remove? --
 Plug('junegunn/vim-easy-align')
 
-Plug('ms-jpq/coq_nvim', {branch= 'coq', auto_start= 'silent'})
+Plug('ms-jpq/coq_nvim', {branch= 'coq'})
 Plug('ms-jpq/coq.artifacts', {branch= 'artifacts'})
 Plug('ms-jpq/coq.thirdparty', {branch= '3p'})
-
--- Using a non-default branch
--- Am I using this?
-Plug('rdnetto/YCM-Generator', {branch= 'stable' })
 
 -- plug-in outside ~/.vim/plugged with post-update hook
 Plug('junegunn/fzf', {
@@ -45,7 +40,7 @@ Plug('junegunn/fzf', {
 -- Go
 Plug( 'fatih/vim-go', { 
 	['do'] = function() 
-	  vim.call(':GoUpdateBinaries') 
+	  vim.cmd('GoUpdateBinaries') 
 	end 
 })
 
